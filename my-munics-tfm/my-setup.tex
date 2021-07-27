@@ -1,0 +1,78 @@
+% !TEX root = my-thesis.tex
+
+
+% **************************************************
+% Files' Character Encoding
+% **************************************************
+%% Not necessary with luaLaTeX
+% 
+% \PassOptionsToPackage{utf8}{inputenc}
+% \usepackage{inputenc}
+
+
+% **************************************************
+% Information and Commands for Reuse
+% **************************************************
+\newcommand{\thesisTitle}{Título do Traballo Fin de Máster}
+\newcommand{\thesisName}{Autor do Traballo}
+\newcommand{\thesisSubject}{Traballo Fin de Máster}
+\newcommand{\thesisDate}{Curso 2021/2022}
+
+\newcommand{\thesisFirstSupervisor}{Jane Doe}
+\newcommand{\thesisSecondSupervisor}{John Smith}
+
+\newcommand{\thesisUniversityStudies}{\protect{Máster Inter-Universitario en Ciberseguridade}}
+\newcommand{\thesisUniversity}{Universidade de Vigo}     % Replace with your university
+\newcommand{\thesisUniversitySchool}{Escola de Enxeñaría de Telecomunicación} % Replace with your school
+\newcommand{\thesisUniversityCity}{Vigo}  % Replace with your city
+\newcommand{\thesisUniversityStreetAddress}{Rua Maxwell s/n}
+\newcommand{\thesisUniversityPostalCode}{36310}
+
+
+% **************************************************
+% Debug LaTeX Information
+% **************************************************
+%\listfiles
+
+
+% **************************************************
+% Load and Configure Packages
+% **************************************************
+%\usepackage[english]{babel} % babel system, adjust the language of the content
+\usepackage{polyglossia}
+\setdefaultlanguage{galician}
+\setotherlanguage{english}
+
+\PassOptionsToPackage{% setup clean thesis style
+    figuresep=colon,%
+    hangfigurecaption=false,%
+    hangsection=true,%
+    hangsubsection=true,%
+    sansserif=false,%
+    configurelistings=true,%
+    colorize=full,%
+    colortheme=bluemagenta,%
+    configurebiblatex=true,%
+    bibsys=biber,%
+    bibfile=bib-refs,%
+    bibstyle=alphabetic,%
+    bibsorting=nty,%
+}{munics}
+\usepackage{munics}
+
+\hypersetup{% setup the hyperref-package options
+    pdftitle={\thesisTitle},    %   - title (PDF meta)
+    pdfsubject={\thesisSubject},%   - subject (PDF meta)
+    pdfauthor={\thesisName},    %   - author (PDF meta)
+    plainpages=false,           %   -
+    colorlinks=false,           %   - colorize links?
+    pdfborder={0 0 0},          %   -
+    breaklinks=true,            %   - allow line break inside links
+    bookmarksnumbered=true,     %
+    bookmarksopen=true          %
+}
+
+% **************************************************
+% Other Packages
+% **************************************************
+\usepackage{scrhack}

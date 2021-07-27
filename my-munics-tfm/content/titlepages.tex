@@ -1,0 +1,44 @@
+% !TEX root = ../my-tfm.tex
+% ------------------------------------  --> main title page
+\begin{titlepage}
+	\pdfbookmark[0]{Titlepage}{Titlepage}
+	% Different margins for the title page
+	\newgeometry{left=0cm,right=0cm,top=10cm,bottom=6cm}
+	\fontfamily{raleway}\selectfont
+	\centering
+    \MUniCSCover
+
+    \newfontfamily\raleway[Ligatures=TeX]{Raleway-Regular}
+
+    \vfill	
+	{\fontsize{26pt}{26pt}\selectfont\raleway\color{white}\bfseries{\thesisTitle} \\[10mm]}
+	{\fontsize{20pt}{20pt}\raleway\color{white}\thesisName} \\[5mm]
+    {\raleway\color{lightgray} Titores: \thesisFirstSupervisor\ e \thesisSecondSupervisor}
+	\vfill
+
+
+
+
+	{\raleway\color{white}\thesisDate}
+	\restoregeometry
+
+    % We restore the original margins
+
+\end{titlepage}
+
+
+% ------------------------------------  --> lower title back for single page layout
+
+\clearpage
+\begin{textblock*}{10cm}(2cm,\dimexpr\paperheight-8cm\relax)
+	\small
+	\textbf{\thesisName} \\
+	\textit{\thesisTitle} \\
+    \thesisSubject. \thesisDate \\
+	Titores: \thesisFirstSupervisor\ e \thesisSecondSupervisor \\[1.5em]
+	\textbf{\thesisUniversityStudies} \\
+	\textit{\thesisUniversity} \\
+	\thesisUniversitySchool \\
+	\thesisUniversityStreetAddress \\
+	\thesisUniversityPostalCode, \thesisUniversityCity
+\end{textblock*}
